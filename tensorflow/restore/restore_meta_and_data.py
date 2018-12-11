@@ -10,6 +10,7 @@ import tensorflow as tf
 #     sess.run(tf.global_variables_initializer())
 #     saver.save(sess,'/Users/huangzhouhong/Downloads/test/test')
 
+#use `saver=tf.train.Saver()` if not load graph
 saver=tf.train.import_meta_graph('/Users/huangzhouhong/Downloads/test/test.meta')
 with tf.Session() as sess:
     saver.restore(sess,tf.train.latest_checkpoint('/Users/huangzhouhong/Downloads/test'))
